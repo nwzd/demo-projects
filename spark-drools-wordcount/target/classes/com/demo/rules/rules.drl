@@ -1,0 +1,25 @@
+package com.demo.rules;
+
+import com.demo.fact.Word
+import com.demo.fact.Significance
+
+rule "BAJO"
+  when 
+    word: Word(occurence <=5)
+  then
+    word.setLevel(Significance.LOW);
+end 
+
+rule "MODERADO"
+  when 
+    word: Word(occurence > 5, occurence <= 10)
+  then
+    word.setLevel(Significance.MODERATE);
+end 
+
+rule "ALTO"
+  when 
+    word: Word(occurence > 10)
+  then
+    word.setLevel(Significance.HIGH);
+end 

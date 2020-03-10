@@ -1,4 +1,4 @@
-package com.journaldev.sparkdemo;
+package com.demo.spark.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
